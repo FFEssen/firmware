@@ -1,6 +1,6 @@
 # Firmware von Freifunk Essen
 
-This repository is a fork of (https://git.c3pb.de/freifunk-pb/firmware).
+This repository is a fork of [ffho-firmware](https://git.c3pb.de/freifunk-pb/firmware).
 
 Dieses Repository beherbergt die Skripte, um die Firmware von Freifunk Essen zu bauen.
 Die Inhalte dieses Repositories werden unter einer "2-clause BSD" Lizenz veröffentlicht, Details sind der Datei [LICENSE](https://git.c3pb.de/freifunk-pb/firmware/blob/master/LICENSE) zu entnehmen.
@@ -41,7 +41,7 @@ sudo apt-get install build-essential git gawk python subversion unzip p7zip-full
 
 Klone das Repository in dem diese ReadMe liegt, falls noch nicht geschehen und wechsle in das Verzeichnis:
 ```bash
-git clone https://git.c3pb.de/freifunk-pb/firmware.git
+git clone https://github.com/ffessen/firmware.git
 cd firmware
 ```
 
@@ -70,10 +70,11 @@ optional:
 ### Beispiele
 
 ```bash
-# Baut eine testing-Firmware auf Basis von Gluon 2014.4
-BASE=v2014.4 BRANCH=testing VERSION=0.6~rc1 ./build.sh
+# Baut eine testing-Firmware auf Basis von Gluon 2015.1.2
+BASE=v2015.1.2 BRANCH=testing VERSION=7.1.2-1 \
+SITE_ID=4ef6f0222fbaae466065f97093bbaa752a9ca57e ./build.sh 
 
-# Baut eine experimental-Firmware auf Basis des aktuellen Gluon-Master (nur für Experten)
+# Baut eine experimental-Firmware auf Basis des aktuellen Master-Branches (nur für Experten)
 BASE=master BRANCH=experimental ./build.sh
 ```
 
@@ -84,7 +85,7 @@ Nach erfolgreichem Build-Vorgang liegt die Firmware fertig paketiert im `output/
 
 Klone das Repository in dem diese ReadMe liegt, falls noch nicht geschehen und wechsle in das Verzeichnis:
 ```bash
-git clone https://github.com/ffessen/firmware/firmware.git
+git clone https://github.com/ffessen/firmware.git
 cd firmware
 ```
 
@@ -97,6 +98,6 @@ Die Nutzung von Docker zur Überprüfung von Builds wird dringend empfohlen, da 
 ### Beispiele
 
 ```bash
-./build_version.sh 0.6.1_stable # baut Version '0.6.1_stable' erneut
-NO_DOCKER=1 ./build_version.sh 0.6.1_stable # ohne Docker-Umgebung erneut bauen
+./build_version.sh 7.1.2-1_stable # baut Version '7.1.2-1_stable' erneut
+NO_DOCKER=1 ./build_version.sh 7.1.2-1_stable # ohne Docker-Umgebung erneut bauen
 ```
