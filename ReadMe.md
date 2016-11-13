@@ -69,10 +69,11 @@ optional:
 
 ### Beispiele
 
+Hinweis: NO_FAKETIME=1 muss bei 2016.2.1 gesetzt werden, da es sonst ein Problem mit der OpenWrt-Toolchain gibt.
 ```bash
 # Baut eine testing-Firmware auf Basis von Gluon 2015.1.2
-BASE=v2015.1.2 BRANCH=testing VERSION=1.1.2-1 \
-SITE_ID=4ef6f0222fbaae466065f97093bbaa752a9ca57e ./build.sh 
+BASE=v2016.2.1 BRANCH=beta VERSION=2.2.1-1 \
+SITE_ID=7b32c45cdaf5a45a3965b49087d2abb41f1b0f14 ./build.sh 
 
 # Baut eine experimental-Firmware auf Basis des aktuellen Master-Branches (nur für Experten)
 BASE=master BRANCH=experimental ./build.sh
