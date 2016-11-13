@@ -71,7 +71,7 @@ optional:
 
 ```bash
 # Baut eine testing-Firmware auf Basis von Gluon 2015.1.2
-BASE=v2015.1.2 BRANCH=testing VERSION=7.1.2-1 \
+BASE=v2015.1.2 BRANCH=testing VERSION=1.1.2-1 \
 SITE_ID=4ef6f0222fbaae466065f97093bbaa752a9ca57e ./build.sh 
 
 # Baut eine experimental-Firmware auf Basis des aktuellen Master-Branches (nur für Experten)
@@ -98,6 +98,6 @@ Die Nutzung von Docker zur Überprüfung von Builds wird dringend empfohlen, da 
 ### Beispiele
 
 ```bash
-./build_version.sh 7.1.2-1_stable # baut Version '7.1.2-1_stable' erneut
-NO_DOCKER=1 ./build_version.sh 7.1.2-1_stable # ohne Docker-Umgebung erneut bauen
+./build_version.sh 2.2.2-1_stable # baut Version '2.2.1-1_stable' erneut
+NO_DOCKER=1 ./build_version.sh 2.2.1-1_stable # ohne Docker-Umgebung erneut bauen
 ```
